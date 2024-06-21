@@ -1,4 +1,8 @@
-/* base.css */
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box; 
+}
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -23,13 +27,27 @@ nav ul li {
   margin-right: 1rem;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1rem;
+.parent{
+  margin: 1rem 2vw;
 }
 
+.parent section{
+  border: 1px solid #ccc;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1rem 0;
+}
+.parent span{
+  background-color: aqua;
+  color: #FFF;
+  display: block;
+  text-align: center;
+  padding: .75rem 0;
+}
+.parent p{
+  padding: 10px;
+}
 footer {
   text-align: center;
   padding: 1rem;
