@@ -1,0 +1,191 @@
+/* normalize.css or reset.css goes here */
+/* Base styles for your project */
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #f8f9fa;
+}
+
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-toggle-bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: transform 0.3s ease;
+}
+
+.nav-active .nav-toggle-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav-active .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-active .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Hero section styles */
+.hero {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b0/Arequipa_Catedral_1.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #28a745;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #218838;
+}
+
+/* Main content area styles */
+main {
+  padding: 50px 20px;
+  margin-top: 100px; /* Adjust according to header height */
+}
+
+.current-events, .weather-card, .company-spotlights {
+  margin-bottom: 30px;
+}
+
+.current-events h2, .weather-card h2, .company-spotlights h2 {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info {
+  margin-bottom: 10px;
+}
+
+.project-info {
+  font-size: 0.8em;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background-color: #007bff;
+      width: 100%;
+      text-align: center;
+      transition: max-height 0.3s ease-out;
+      max-height: 0;
+      overflow: hidden;
+      z-index: 999;
+  }
+
+  .nav-active .nav-links {
+      max-height: 500px;
+  }
+
+  .nav-links li {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
+  .nav-toggle {
+      display: block;
+  }
+}
