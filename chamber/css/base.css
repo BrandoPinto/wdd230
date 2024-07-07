@@ -1,191 +1,174 @@
-/* normalize.css or reset.css goes here */
-/* Base styles for your project */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Body styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  margin: 0;
-  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #343A40;
 }
 
-/* Header styles */
 header {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-}
-
-.logo img {
-  max-width: 150px;
-  height: auto;
-}
-
-.nav-menu {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+  background-color: #343A40;
+  color: #ffffff;
 }
 
-.nav-links {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+header img {
+  margin-right: 1rem;
 }
 
-.nav-links li {
-  margin-right: 20px;
-}
-
-.nav-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2em;
-  transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #f8f9fa;
-}
-
-.nav-toggle {
+.menu-icon {
   display: none;
+  flex-direction: column;
   cursor: pointer;
 }
 
-.nav-toggle-bar {
+.menu-icon .bar {
   width: 25px;
   height: 3px;
   background-color: #fff;
-  margin: 5px 0;
-  transition: transform 0.3s ease;
+  margin: 4px 0;
 }
 
-.nav-active .nav-toggle-bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+nav {
+  background-color: #007BFF;
 }
 
-.nav-active .nav-toggle-bar:nth-child(2) {
-  opacity: 0;
-}
-
-.nav-active .nav-toggle-bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-/* Hero section styles */
-.hero {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b0/Arequipa_Catedral_1.png');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+nav ul {
+  list-style-type: none;
+  padding: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+}
+
+nav ul li {
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+}
+
+nav ul li a:hover,
+nav ul li.active a {
+  background-color: #0056b3;
+  border-radius: 5px;
+}
+
+.parent {
+  margin: 1rem 2vw;
+}
+
+.parent section {
+  border: 1px solid #ccc;
+  background-color: #007BFF;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1rem 0;
   color: #fff;
 }
 
-.hero-content {
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+.parent span {
+  background-color: #0056b3;
+  color: #FFF;
+  display: block;
+  text-align: center;
+  padding: .75rem 0;
+}
+
+.parent p {
+  padding: 10px;
+}
+
+footer {
+  background-color: #343A40;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: transform 0.3s ease; 
+  }
+
+  .menu-icon.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-icon.open .bar:nth-child(2) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  nav ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  nav.open ul {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0;
+    border-bottom: 1px solid #0056b3;
+  }
+
+  nav ul li:last-child {
+    border-bottom: none;
+  }
+}
+
+.hero {
+  height: 100vh;
+  background-image: url('https://wallpapercave.com/wp/wp4201472.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
 }
 
 .hero h1 {
-  font-size: 3em;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
-.hero p {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-}
-
-.cta-button {
-  display: inline-block;
-  background-color: #28a745;
-  color: #fff;
-  padding: 15px 30px;
-  text-decoration: none;
+.hero .btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
   border-radius: 5px;
-  font-weight: bold;
-  font-size: 1.2em;
+  text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
-  background-color: #218838;
-}
-
-/* Main content area styles */
-main {
-  padding: 50px 20px;
-  margin-top: 100px; /* Adjust according to header height */
-}
-
-.current-events, .weather-card, .company-spotlights {
-  margin-bottom: 30px;
-}
-
-.current-events h2, .weather-card h2, .company-spotlights h2 {
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 5px;
-}
-
-/* Footer styles */
-footer {
-  background-color: #343a40;
-  color: #fff;
-  padding: 30px 20px;
-  text-align: center;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.contact-info {
-  margin-bottom: 10px;
-}
-
-.project-info {
-  font-size: 0.8em;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-  .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      background-color: #007bff;
-      width: 100%;
-      text-align: center;
-      transition: max-height 0.3s ease-out;
-      max-height: 0;
-      overflow: hidden;
-      z-index: 999;
-  }
-
-  .nav-active .nav-links {
-      max-height: 500px;
-  }
-
-  .nav-links li {
-      margin-right: 0;
-      margin-bottom: 10px;
-  }
-
-  .nav-toggle {
-      display: block;
-  }
+.hero .btn:hover {
+  background-color: #0056b3;
 }

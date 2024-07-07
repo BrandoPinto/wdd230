@@ -1,91 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Chamber of Commerce</title>
-    <meta name="description" content="Description of your chamber of commerce website.">
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="css/base.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arequipa Chamber of Commerce</title>
+  <meta name="description" content="WDD 230 - Web Frontend Development" />
+  <meta name="author" content="Brando Pinto" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="icon" type="image/jpg" href="https://pbs.twimg.com/profile_images/1131730372/logo_GRA_sombra_400x400.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Chamber of Commerce Logo">
-        </div>
-        <nav class="nav-menu">
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Membership</a></li>
-                <!-- Add more navigation items as per your project -->
-            </ul>
-            <div class="nav-toggle">
-                <div class="nav-toggle-bar"></div>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <img src="https://pbs.twimg.com/profile_images/1131730372/logo_GRA_sombra_400x400.png" alt="Logo" width="70" height="64">
+    <h1>Arequipa Chamber of Commerce</h1>
+    <div id="menu-toggle" class="menu-icon">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
 
-    <!-- Hero Image Section -->
+  <nav id="menu">
+    <ul>
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
     <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Your Chamber of Commerce</h1>
-            <p>Your tagline or brief description here...</p>
-            <a href="#" class="cta-button">Join Now</a>
-        </div>
+      <h1>Welcome to the Arequipa Chamber of Commerce</h1>
+      <a href="#" class="btn">Join Us</a>
     </section>
 
-    <!-- Main Content Area -->
-    <main>
-        <!-- Current Events Section -->
-        <section class="current-events">
-            <h2>Current Events</h2>
-            <p>Placeholder for current events information...</p>
+    <!-- Content sections -->
+    <section class="content">
+      <div class="parent">
+        <section>
+          <span>Events</span>
+          <p>Content for learning activities goes here.</p>
         </section>
-
-        <!-- Weather Card Section -->
-        <section class="weather-card">
-            <h2>Weather</h2>
-            <div class="weather-info">
-                <!-- Placeholder for weather card -->
-            </div>
+        <section>
+          <span>Weather Card</span>
+          <p>Informational content goes here.</p>
         </section>
+        <section>
+            <span>Advertisements</span>
+            <p>Informational content goes here.</p>
+          </section>
+      </div>
+    </section>
+  </main>
 
-        <!-- Company Spotlights Section -->
-        <section class="company-spotlights">
-            <h2>Company Spotlights</h2>
-            <div class="spotlights">
-                <!-- Placeholder for company spotlights -->
-            </div>
-        </section>
-    </main>
+  <footer>
+    <div class="copyright"> &copy; <span id="copyrightyear"></span> ǀ Brando Pinto | Arequipa, Perú </div>
+    <p>Last updated <span id="modify"></span>.</p>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-                <p>Contact us at: example@email.com | Phone: 123-456-7890</p>
-            </div>
-            <div class="project-info">
-                <p>Developed by Your Full Name for WDD 230</p>
-                <p>Last modified: <span id="lastModified"></span></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript for dynamic last modified date -->
-    <script>
-        document.getElementById('lastModified').textContent = document.lastModified;
-    </script>
-    
-    <!-- JavaScript for responsive menu -->
-    <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('nav-active');
-        });
-    </script>
+  <!-- Scripts -->
+  <script src="scripts/menu.js"></script>
+  <script src="scripts/getDates.js"></script>
 </body>
 </html>
