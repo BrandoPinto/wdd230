@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 03</title>
+    <meta name="description" content="WDD 230 - Responsive Images" />
+    <meta name="theme-color" content="#006EB6" />
+    <link rel="stylesheet" href="css/base.css" />
+</head>
+<body>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 500px )" srcset="images/peru-arequipa-temple.webp">
+                <source media="(max-width: 1000px )" srcset="images/peru-arequipa-temple.webp">
+                <img src="images/peru-arequipa-temple.webp" alt="Arequipa Peru LDS Temple" width="1280" height="750">
+            </picture>
+        </div>
+    </main>
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.579402663707!2d-71.53745128509067!3d-16.409047588681306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424a213b769733%3A0x1e1c2e2c9d6d7e52!2sArequipa%2C%20Peru!5e0!3m2!1sen!2sus!4v1625722896051!5m2!1sen!2sus"
+            width="1280" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <footer>
+        <p>Contact Information</p>
+        <p>Project Details</p>
+        <p>Last Modification Date: <span id="last-modified"></span></p>
+    </footer>
+    <script>
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
+</body>
+</html>
