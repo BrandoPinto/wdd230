@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arequipa Chamber of Commerce</title>
+  <title>Discover - Arequipa Chamber of Commerce</title>
   <meta name="description" content="WDD 230 - Web Frontend Development" />
   <meta name="author" content="Brando Pinto" />
   <link rel="stylesheet" href="css/base.css">
@@ -34,27 +34,47 @@
     </ul>
   </nav>
 
-  <main>
-    <section class="hero">
-      <h1>Welcome to the Arequipa Chamber of Commerce</h1>
-      <a href="#" class="btn">Join Us</a>
-    </section>
-
-    <!-- Content sections -->
-    <section class="content">
-      <div class="parent">
-        <section>
-          <span>Events</span>
-          <p>Content for learning activities goes here.</p>
-        </section>
-        <section>
-          <span>Weather Card</span>
-          <p>Informational content goes here.</p>
-        </section>
-        <section>
-            <span>Advertisements</span>
-            <p>Informational content goes here.</p>
-          </section>
+  <main class="grid-container">
+    <aside class="sidebar">
+      <div id="visit-message"></div>
+      <section class="sidebar-section">
+        <h2>Demographics</h2>
+        <p>Population: 1,008,290</p>
+        <p>Area: 2,919 km²</p>
+      </section>
+      <section class="sidebar-section">
+        <h2>Statistics</h2>
+        <p>Average Temperature: 15°C</p>
+        <p>Annual Rainfall: 350mm</p>
+      </section>
+      <section class="sidebar-section">
+        <h2>Events</h2>
+        <ul>
+          <li>Festival of Arequipa: August 15</li>
+          <li>National Holidays: July 28-29</li>
+        </ul>
+      </section>
+      <section class="sidebar-section">
+        <h2>Attractions</h2>
+        <ul>
+          <li>Santa Catalina Monastery</li>
+          <li>Colca Canyon</li>
+        </ul>
+      </section>
+      <section class="sidebar-section">
+        <h2>Calendar</h2>
+        <p>Upcoming events and activities.</p>
+      </section>
+    </aside>
+    <section class="main-content">
+      <h2>Local Photos of Interest</h2>
+      <div class="gallery">
+        <img src="images/discover/photo1.jpg" alt="Description 1" class="lazy" data-src="images/discover/photo1.jpg">
+        <img src="images/discover/photo2.jpg" alt="Description 2" class="lazy" data-src="images/discover/photo2.jpg">
+        <img src="images/discover/photo3.jpg" alt="Description 3" class="lazy" data-src="images/discover/photo3.jpg">
+        <img src="images/discover/photo4.jpg" alt="Description 4" class="lazy" data-src="images/discover/photo4.jpg">
+        <img src="images/discover/photo5.jpg" alt="Description 5" class="lazy" data-src="images/discover/photo5.jpg">
+        <img src="images/discover/photo6.jpg" alt="Description 6" class="lazy" data-src="images/discover/photo6.jpg">
       </div>
     </section>
   </main>
