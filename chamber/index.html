@@ -1,70 +1,108 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arequipa Chamber of Commerce</title>
-  <meta name="description" content="WDD 230 - Web Frontend Development" />
-  <meta name="author" content="Brando Pinto" />
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="styles/larger.css">
-  <link rel="icon" type="image/jpg" href="https://pbs.twimg.com/profile_images/1131730372/logo_GRA_sombra_400x400.png"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Home Page of the website Funes Chamber of Commerce. Here you will find the hero and call to action, events, weather, news and release and spotlight.">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Signika+Negative&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <title>Home - Arequipa Chamber of Commerce</title>
 </head>
 <body>
-  <header>
-    <img src="https://pbs.twimg.com/profile_images/1131730372/logo_GRA_sombra_400x400.png" alt="Logo" width="70" height="64">
-    <h1>Arequipa Chamber of Commerce</h1>
-    <div id="menu-toggle" class="menu-icon">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-  </header>
+    <header>
+        <div class="header-logo"><a href="./"><img src="images/logo/aqp.jpg" height=""
+                    alt="Funes Chamber of Commerce Logo"></a></div>
+        <h1 class="header-h1">Arequipa Chamber of Commerce</h1>
+        <p id="todaysDate"></p>
+        <nav>
+            <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+            <ul id="primaryNav">
+                <li class="active"><a href="./">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="index-main">
+        <div id="lastVisit">
+            <p></p>
+        </div>
+        <div class="home-hero">
+            <h2 class="home-hero-h2">Welcome to Arequipa</h2>
+            <picture>
+                <source media="(max-width: 559px)" srcset="images/discover/photo5.jpg">
+                <source media="(max-width: 1023px)" srcset="images/discover/photo5.jpg">
+                <img src="images/discover/photo5.jpg" alt="Team meeting banner">
+            </picture>
+        </div>
+        <div class="home-event">
+            <h2>Arequipa</h2>
+            <div>
+                <p>Come join us in this awesome Trail Race, Friday at 08:00 AM</p>
+                <a href="discover.html">more info...</a>
+            </div>
 
-  <nav id="menu">
-    <ul>
-        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="discover.html" class="nav-link">Discover</a></li>
-        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-        <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <section class="hero">
-      <h1>Welcome to the Arequipa Chamber of Commerce</h1>
-      <a href="#" class="btn">Join Us</a>
-    </section>
-
-    <!-- Content sections -->
-    <section class="content">
-      <div class="parent">
-        <section>
-          <span>Events</span>
-          <p>Content for learning activities goes here.</p>
-        </section>
-        <section>
-          <span>Weather Card</span>
-          <p>Informational content goes here.</p>
-        </section>
-        <section>
-            <span>Advertisements</span>
-            <p>Informational content goes here.</p>
-          </section>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="copyright"> &copy; <span id="copyrightyear"></span> ǀ Brando Pinto | Arequipa, Perú </div>
-    <p>Last updated <span id="modify"></span>.</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="scripts/main.js"></script>
+        </div>
+        <div class="home-weather">
+            <h2 id="weather-title">Weather</h2>
+            <img id="weather-picture" alt="Weather image">
+            <div class="home-weather-section1">
+                <p><span id="temperature"></span>°C</p>
+                <p><span id="weather-description"></span></p>
+            </div>
+            <div class="home-weather-section2">
+                <p>Wind Speed:</p>
+                <p>Wind Chill:</p>
+            </div>
+            <div class="home-weather-section3">
+                <p><span id="windSpeed"></span> km/h</p>
+                <p><span id="windChill"></span></p>
+            </div>
+            <a href="https://openweathermap.org">openweathermap.org</a>
+        </div>
+        <div class="home-news-release">
+            <h2>News Release</h2>
+            <p>In a momentous achievement, the Arequipa Chamber of Commerce has been hailed as a national model of
+                excellence, setting new benchmarks for community-driven economic growth. This prestigious recognition
+                comes as a result of the chamber's unwavering commitment to fostering entrepreneurship, supporting local
+                businesses, and implementing innovative initiatives that have propelled the region's prosperity to new
+                heights.</p>
+        </div>
+        <div class="home-join hide-join">
+            <a class="join-link" href="join.html">Join Us!</a>
+            <p>Discover how to join the chamber of commerce!</p>
+        </div>
+        <div class="home-spotlight">
+        </div>
+    </main>
+    <footer>
+        <div class="footer-section3">
+            <p class="copyright">&copy; <span id="currentyear"></span> Arequipa Chamber </p>
+            <p class="footer-name"><span class="footer-separator"> | </span> Brando Pinto <span
+                    class="footer-separator"> | </span></p>
+            <p class="footer-wdd230">WDD 230<span class="footer-separator"> | </span></p>
+            <p class="lastmodified"></p>
+        </div>
+        <div class="footer-section4">
+            <p class="lastmodified2"></p>
+        </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/directory.js"></script>
+    <script type="module" src="scripts/weather.js"></script>
+    <script type="module" src="scripts/windchill.js"></script>
 </body>
+
 </html>

@@ -1,72 +1,45 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.getElementById("menu-toggle");
-  const menu = document.getElementById("menu");
+/* HAMBURGER BUTTON */
+function toggleMenu() {
+  document.getElementById("primaryNav").classList.toggle("open");
+  document.getElementById("hamburgerBtn").classList.toggle("open");
+};
 
-  menuToggle.addEventListener("click", function () {
-    menu.classList.toggle("open");
-    menuToggle.classList.toggle("open");
-  });
-});
+const x = document.getElementById("hamburgerBtn")
+x.onclick = toggleMenu;
 
-document.querySelector("#copyrightyear").textContent =  new Date().getFullYear();
+/* TODAY'S DATE IN HEADER */
+const todayDateField = document.querySelector("#todaysDate");
+const date = new Date();
+const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(date);
+todayDateField.innerHTML = fulldate;
 
-
-document.getElementById("modify").innerHTML = document.lastModified
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target;
-          lazyImage.src = lazyImage.dataset.src;
-          lazyImage.classList.remove("lazy");
-          lazyImageObserver.unobserve(lazyImage);
-        }
-      });
-    });
-
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage);
-    });
-  } else {
-    // Fallback for browsers that do not support IntersectionObserver
-    let lazyLoad = function() {
-      lazyImages.forEach(function(lazyImage) {
-        if (lazyImage.getBoundingClientRect().top < window.innerHeight && lazyImage.getBoundingClientRect().bottom > 0) {
-          lazyImage.src = lazyImage.dataset.src;
-          lazyImage.classList.remove("lazy");
-        }
-      });
-    };
-
-    window.addEventListener("scroll", lazyLoad);
-    window.addEventListener("resize", lazyLoad);
-    lazyLoad();
+/* JOIN US BANNER */
+/* Display banner if day is Monday or Wednesday, it's forcing to hide it instead */
+const meetingBanner = document.querySelector("#home-meeting-banner")
+if (meetingBanner != null) {
+  if (date.getDay() === 1 || date.getDay() === 2) {
+      meetingBanner.style.display = "block";
   }
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  const visitMessage = document.getElementById("visit-message");
-  const lastVisit = localStorage.getItem("lastVisit");
-  const now = Date.now();
-  
-  if (lastVisit) {
-    const daysSinceLastVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-    if (daysSinceLastVisit < 1) {
-      visitMessage.textContent = "Back so soon! Awesome!";
-    } else if (daysSinceLastVisit === 1) {
-      visitMessage.textContent = `You last visited 1 day ago.`;
-    } else {
-      visitMessage.textContent = `You last visited ${daysSinceLastVisit} days ago.`;
-    }
-  } else {
-    visitMessage.textContent = "Welcome! Let us know if you have any questions.";
+  else {
+      meetingBanner.style.display = "none";
   }
+};
+/* FOOTER COPYRIGHT YEAR AND LAST MODIFIED */
+let lastModified = document.querySelector(".lastmodified")
+let lastModified2 = document.querySelector(".lastmodified2")
+let currentYear = document.querySelector("#currentyear")
 
-  localStorage.setItem("lastVisit", now);
-});
+const lastModifiedOptions = {
+  day: "numeric",
+  month: "numeric",
+  year: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+};
+const currentYearOptions = {
+  year: "numeric",
+};
+lastModified.textContent = ` Last Modified: ${new Date(document.lastModified).toLocaleDateString("en-US", lastModifiedOptions)}`;
+lastModified2.textContent = ` Last Modified: ${new Date(document.lastModified).toLocaleDateString("en-US", lastModifiedOptions)}`;
+currentYear.textContent = `${new Date().toLocaleDateString("en-US", currentYearOptions)}`
