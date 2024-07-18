@@ -419,7 +419,7 @@ form input.submitBtn {
   font-size: 1.2rem;
   border: solid 1px black;
   color: #fff;
-  background-color: #501717;
+  background-color: #8f2a2a;
   padding: .75rem 1.5rem;
   width: 96%;
   max-width: 15rem;
@@ -429,7 +429,7 @@ form input.submitBtn:hover {
   background-color: rgba(137, 178, 192, .9);
 }
 form label.top input:required {
-  border-left: red solid 6px;
+  border-left: #8f2a2a solid 6px;
 }
 form label.top input:required:valid {
   border-left: green solid 6px;
