@@ -43,5 +43,23 @@
     "image": "images/directory/directory-5.png",
     "membershipLevel": "Bronze",
     "description": "Good."
+  },
+  {
+    "name": "Ariana Jara",
+    "address": "202 Juan Polar, Arequipa, Peru",
+    "phone": "921-401-760",
+    "website": "https://brandopinto.github.io/wdd230/chamber/",
+    "image": "images/directory/directory-6.png",
+    "membershipLevel": "Bronze",
+    "description": "Good."
+  },
+  {
+    "name": "Martha Pinto",
+    "address": "C25 Juan Polar, Arequipa, Peru",
+    "phone": "921-497-760",
+    "website": "https://brandopinto.github.io/wdd230/chamber/",
+    "image": "images/directory/directory-7.png",
+    "membershipLevel": "Bronze",
+    "description": "Good."
   }
 ]
