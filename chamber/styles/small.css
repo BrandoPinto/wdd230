@@ -3,7 +3,7 @@ body {
 }
 /* HEADER*/
 nav {
-  background-color: #8f2a2a;
+  background-color: #a3a524;;
   grid-column: 1/4;
   grid-row: 3;
 }
@@ -61,7 +61,7 @@ header {
   grid-row: 2;
   display: flex;
   text-align: center;
-  background-color: #8f2a2a;
+  background-color: #a3a524;;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
